@@ -14,6 +14,8 @@ MQTT_SERVICE_HOST = os.getenv('MQTT_SERVICE_HOST', 'mosquitto.local')
 MQTT_SERVICE_PORT = int(os.getenv('MQTT_SERVICE_PORT', 1883))
 MQTT_SERVICE_TOPIC = os.getenv('MQTT_SERVICE_TOPIC', 'openweather')
 MQTT_CLIENT_ID = os.getenv('HOSTNAME', 'openweather-mqtt-service')
+MQTT_SERVICE_USER = os.getenv('MQTT_SERVICE_USER', '')
+MQTT_SERVICE_PW = os.getenv('MQTT_SERVICE_PW', '')
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s [%(name)s] %(levelname)8s %(message)s')
 logger = logging.getLogger(MQTT_CLIENT_ID)
@@ -26,6 +28,8 @@ logger.debug(f"# MQTT_SERVICE_HOST={MQTT_SERVICE_HOST}")
 logger.debug(f"# MQTT_SERVICE_PORT={MQTT_SERVICE_PORT}")
 logger.debug(f"# MQTT_SERVICE_TOPIC={MQTT_SERVICE_TOPIC}")
 logger.debug(f"# MQTT_CLIENT_ID={MQTT_CLIENT_ID}")
+logger.debug(f"# MQTT_SERVICE_USER={MQTT_SERVICE_USER}")
+logger.debug(f"# MQTT_SERVICE_PW={MQTT_SERVICE_PW}")
 logger.debug("#" * 80)
 
 
@@ -85,7 +89,12 @@ if __name__ == "__main__":
             last_update = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(data['dt']))
             for i in range(60):
                 logger.info(f"Publishing to {MQTT_SERVICE_HOST}:{MQTT_SERVICE_PORT} [last_update={last_update}]")
-                publish.multiple(msgs, hostname=MQTT_SERVICE_HOST, port=MQTT_SERVICE_PORT, client_id=MQTT_CLIENT_ID)
+                publish.multiple(
+                    msgs,
+                    hostname=MQTT_SERVICE_HOST,
+                    port=MQTT_SERVICE_PORT, client_id=MQTT_CLIENT_ID,
+                    auth={'username': MQTT_SERVICE_USER, 'password': MQTT_SERVICE_PW}
+                )
                 time.sleep(1)
 
         except Exception:
