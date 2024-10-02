@@ -6,6 +6,11 @@ import time
 import paho.mqtt.publish as publish
 import requests
 
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
 # Config from environment (see Dockerfile)
 OPENWEATHER_APP_ID = os.getenv('OPENWEATHER_APP_ID', 'YOUR_OPENWEATHER_APP_ID')
 OPENWEATHER_CITY_ID = os.getenv('OPENWEATHER_CITY_ID', 'YOUR_OPENWEATHER_CITY_ID')
@@ -14,8 +19,8 @@ MQTT_SERVICE_HOST = os.getenv('MQTT_SERVICE_HOST', 'mosquitto.local')
 MQTT_SERVICE_PORT = int(os.getenv('MQTT_SERVICE_PORT', 1883))
 MQTT_SERVICE_TOPIC = os.getenv('MQTT_SERVICE_TOPIC', 'openweather')
 MQTT_CLIENT_ID = os.getenv('HOSTNAME', 'openweather-mqtt-service')
-MQTT_SERVICE_USER = os.getenv('MQTT_SERVICE_USER', '')
-MQTT_SERVICE_PW = os.getenv('MQTT_SERVICE_PW', '')
+MQTT_SERVICE_USER = os.getenv('MQTT_SERVICE_USER')
+MQTT_SERVICE_PW = os.getenv('MQTT_SERVICE_PW')
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s [%(name)s] %(levelname)8s %(message)s')
 logger = logging.getLogger(MQTT_CLIENT_ID)
@@ -89,12 +94,20 @@ if __name__ == "__main__":
             last_update = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(data['dt']))
             for i in range(60):
                 logger.info(f"Publishing to {MQTT_SERVICE_HOST}:{MQTT_SERVICE_PORT} [last_update={last_update}]")
-                publish.multiple(
-                    msgs,
-                    hostname=MQTT_SERVICE_HOST,
-                    port=MQTT_SERVICE_PORT, client_id=MQTT_CLIENT_ID,
-                    auth={'username': MQTT_SERVICE_USER, 'password': MQTT_SERVICE_PW}
-                )
+                # Building the parameters for the publish.multiple() call
+                kwargs = {
+                    'hostname': MQTT_SERVICE_HOST,
+                    'port': MQTT_SERVICE_PORT,
+                    'client_id': MQTT_CLIENT_ID
+                }
+
+                # Only add auth if user and password are available
+                if MQTT_SERVICE_USER and MQTT_SERVICE_PW:
+                    kwargs['auth'] = {'username': MQTT_SERVICE_USER, 'password': MQTT_SERVICE_PW}
+
+                # Call publish.multiple with the appropriate parameters
+                publish.multiple(msgs, **kwargs)
+
                 time.sleep(1)
 
         except Exception:
