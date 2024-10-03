@@ -70,7 +70,7 @@ if __name__ == "__main__":
         try:
 
             logger.info("Connecting to OpenWeather for fresh weather information.")
-            url = f"http://api.openweathermap.org/data/2.5/weather?id={OPENWEATHER_CITY_ID}&appid={OPENWEATHER_APP_ID}&type=accurate&units=metric&lang=fr"
+            url = f"http://api.openweathermap.org/data/2.5/weather?id={OPENWEATHER_CITY_ID}&appid={OPENWEATHER_APP_ID}&type=accurate&units=metric&lang=de"
             r = requests.get(url)
             data = r.json()
 
