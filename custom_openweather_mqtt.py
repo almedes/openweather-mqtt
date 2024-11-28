@@ -133,7 +133,7 @@ if __name__ == "__main__":
                 if MQTT_SERVICE_USER_1 and MQTT_SERVICE_PW_1:
                     kwargs1['auth'] = {'username': MQTT_SERVICE_USER_1, 'password': MQTT_SERVICE_PW_1}
                 if MQTT_SERVICE_USER_2 and MQTT_SERVICE_PW_2:
-                    kwargs1['auth'] = {'username': MQTT_SERVICE_USER_2, 'password': MQTT_SERVICE_PW_2}
+                    kwargs2['auth'] = {'username': MQTT_SERVICE_USER_2, 'password': MQTT_SERVICE_PW_2}
 
                 # Call publish.multiple with the appropriate parameters
                 publish.multiple(msgs1, **kwargs1)
