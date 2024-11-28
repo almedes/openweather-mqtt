@@ -52,7 +52,7 @@ export MQTT_CLIENT_ID=openweather-mqtt-service
 Launch application:
 
 ```sh
-python3 ./openweather_mqtt.py
+python3 ./custom_openweather_mqtt.py
 ```
 
 You should see output printed:
