@@ -82,9 +82,7 @@ if __name__ == "__main__":
     previous_last_update = 0
 
     while True:
-
         try:
-
             logger.info("Connecting to OpenWeather for fresh weather information.")
             url = f"http://api.openweathermap.org/data/2.5/weather?id={OPENWEATHER_CITY_ID_1}&appid={OPENWEATHER_APP_ID}&type=accurate&units=metric&lang=de"
             r = requests.get(url)
@@ -107,15 +105,11 @@ if __name__ == "__main__":
                 for k, v in sorted(flatten_dict(data, delimiter='/').items()):
                     logger.info(f"{k:24} ---> {v}")
                     msgs2.append({'topic': f"{MQTT_SERVICE_TOPIC_2}/{k}", 'payload': str(v)})
-            else:
-                logger.info("No updated data from Openweather...")
 
-            # Publish openweather results on given MQTT broker every second, so we can view it often,
-            # but call Openweather API every ~1min (otherwise you'll get locked due to API rate limits)
-            last_update = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(data['dt']))
-            for i in range(60):
-                logger.info(f"Publishing to {MQTT_SERVICE_HOST_1}:{MQTT_SERVICE_PORT_1} [last_update={last_update}]")
-                logger.info(f"Publishing to {MQTT_SERVICE_HOST_2}:{MQTT_SERVICE_PORT_2} [last_update={last_update}]")
+                # Publish data to MQTT broker
+                logger.info(f"Publishing to {MQTT_SERVICE_HOST_1}:{MQTT_SERVICE_PORT_1}")
+                logger.info(f"Publishing to {MQTT_SERVICE_HOST_2}:{MQTT_SERVICE_PORT_2}")
+
                 # Building the parameters for the publish.multiple() call
                 kwargs1 = {
                     'hostname': MQTT_SERVICE_HOST_1,
@@ -139,7 +133,11 @@ if __name__ == "__main__":
                 publish.multiple(msgs1, **kwargs1)
                 publish.multiple(msgs2, **kwargs2)
 
-                time.sleep(1)
+            else:
+                logger.info("No updated data from Openweather...")
+
+            # Sleep for 5 minutes before the next API call
+            time.sleep(300)
 
         except Exception:
-            logger.error("An error occured:", exc_info=True)
+            logger.error("An error occurred:", exc_info=True)
