@@ -1,5 +1,14 @@
-FROM --platform=linux/arm/v7 rsaikali/openweather-mqtt:latest
-RUN pip install python-dotenv requests==2.28.1 urllib3==1.26.15
+FROM python:3.11-slim
 
-# Copy the modified script to the container, replacing the original one
+WORKDIR /opt
+
+RUN pip install --no-cache-dir \
+    python-dotenv \
+    requests==2.28.1 \
+    urllib3==1.26.15 \
+    paho-mqtt
+
 COPY custom_openweather_mqtt.py /opt/openweather_mqtt.py
+
+CMD ["python", "/opt/openweather_mqtt.py"]
+

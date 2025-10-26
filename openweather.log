@@ -1,0 +1,593 @@
+Error response from daemon: No such container: openweather-mqtt
+2025-10-26 17:19:00,426 [openweather-mqtt-service]    DEBUG ################################################################################
+2025-10-26 17:19:00,426 [openweather-mqtt-service]    DEBUG # OPENWEATHER_APP_ID=197674d6fc53cbb5e3dfbfcc68d4bbd2
+2025-10-26 17:19:00,426 [openweather-mqtt-service]    DEBUG # OPENWEATHER_CITY_ID_1=2917325
+2025-10-26 17:19:00,426 [openweather-mqtt-service]    DEBUG # MQTT_SERVICE_HOST_1=192.168.2.120
+2025-10-26 17:19:00,426 [openweather-mqtt-service]    DEBUG # MQTT_SERVICE_PORT_1=1883
+2025-10-26 17:19:00,426 [openweather-mqtt-service]    DEBUG # MQTT_SERVICE_TOPIC_1=openweather
+2025-10-26 17:19:00,426 [openweather-mqtt-service]    DEBUG # MQTT_CLIENT_ID_1=openweather-mqtt-service
+2025-10-26 17:19:00,426 [openweather-mqtt-service]    DEBUG # MQTT_SERVICE_USER_1=alpha
+2025-10-26 17:19:00,426 [openweather-mqtt-service]    DEBUG # MQTT_SERVICE_PW_1=08alpha64//
+2025-10-26 17:19:00,426 [openweather-mqtt-service]    DEBUG # -------------------------------------------
+2025-10-26 17:19:00,426 [openweather-mqtt-service]    DEBUG # OPENWEATHER_CITY_ID_2=3305800
+2025-10-26 17:19:00,426 [openweather-mqtt-service]    DEBUG # MQTT_SERVICE_HOST_2=zetten14.ddns.net
+2025-10-26 17:19:00,426 [openweather-mqtt-service]    DEBUG # MQTT_SERVICE_PORT_2=1883
+2025-10-26 17:19:00,426 [openweather-mqtt-service]    DEBUG # MQTT_SERVICE_TOPIC_2=Z14_Weather
+2025-10-26 17:19:00,426 [openweather-mqtt-service]    DEBUG # MQTT_CLIENT_ID_2=openweather-mqtt-service
+2025-10-26 17:19:00,426 [openweather-mqtt-service]    DEBUG # MQTT_SERVICE_USER_2=zetten14
+2025-10-26 17:19:00,426 [openweather-mqtt-service]    DEBUG # MQTT_SERVICE_PW_2=zetten14//
+2025-10-26 17:19:00,426 [openweather-mqtt-service]    DEBUG ################################################################################
+2025-10-26 17:19:00,426 [openweather-mqtt-service]     INFO Connecting to OpenWeather for fresh weather information.
+2025-10-26 17:19:00,428 [urllib3.connectionpool]    DEBUG Starting new HTTP connection (1): api.openweathermap.org:80
+2025-10-26 17:19:00,509 [urllib3.connectionpool]    DEBUG http://api.openweathermap.org:80 "GET /data/2.5/weather?id=2917325&appid=197674d6fc53cbb5e3dfbfcc68d4bbd2&type=accurate&units=metric&lang=de HTTP/1.1" 200 510
+2025-10-26 17:19:00,511 [openweather-mqtt-service]     INFO base                     ---> stations
+2025-10-26 17:19:00,511 [openweather-mqtt-service]     INFO clouds/all               ---> 100
+2025-10-26 17:19:00,511 [openweather-mqtt-service]     INFO cod                      ---> 200
+2025-10-26 17:19:00,511 [openweather-mqtt-service]     INFO coord/lat                ---> 51.2333
+2025-10-26 17:19:00,511 [openweather-mqtt-service]     INFO coord/lon                ---> 12.7167
+2025-10-26 17:19:00,512 [openweather-mqtt-service]     INFO dt                       ---> 1761498707
+2025-10-26 17:19:00,512 [openweather-mqtt-service]     INFO id                       ---> 2917325
+2025-10-26 17:19:00,512 [openweather-mqtt-service]     INFO main/feels_like          ---> 3.32
+2025-10-26 17:19:00,512 [openweather-mqtt-service]     INFO main/grnd_level          ---> 982
+2025-10-26 17:19:00,512 [openweather-mqtt-service]     INFO main/humidity            ---> 77
+2025-10-26 17:19:00,512 [openweather-mqtt-service]     INFO main/pressure            ---> 1001
+2025-10-26 17:19:00,512 [openweather-mqtt-service]     INFO main/sea_level           ---> 1001
+2025-10-26 17:19:00,512 [openweather-mqtt-service]     INFO main/temp                ---> 8.1
+2025-10-26 17:19:00,513 [openweather-mqtt-service]     INFO main/temp_max            ---> 8.22
+2025-10-26 17:19:00,513 [openweather-mqtt-service]     INFO main/temp_min            ---> 7.86
+2025-10-26 17:19:00,513 [openweather-mqtt-service]     INFO name                     ---> Grimma
+2025-10-26 17:19:00,513 [openweather-mqtt-service]     INFO rain/1h                  ---> 0
+2025-10-26 17:19:00,513 [openweather-mqtt-service]     INFO rain/3h                  ---> 0
+2025-10-26 17:19:00,513 [openweather-mqtt-service]     INFO sys/country              ---> DE
+2025-10-26 17:19:00,513 [openweather-mqtt-service]     INFO sys/id                   ---> 2000347
+2025-10-26 17:19:00,513 [openweather-mqtt-service]     INFO sys/sunrise              ---> 1761457882
+2025-10-26 17:19:00,513 [openweather-mqtt-service]     INFO sys/sunset               ---> 1761494074
+2025-10-26 17:19:00,513 [openweather-mqtt-service]     INFO sys/type                 ---> 2
+2025-10-26 17:19:00,513 [openweather-mqtt-service]     INFO timezone                 ---> 3600
+2025-10-26 17:19:00,513 [openweather-mqtt-service]     INFO visibility               ---> 10000
+2025-10-26 17:19:00,514 [openweather-mqtt-service]     INFO weather/0/description    ---> Bedeckt
+2025-10-26 17:19:00,514 [openweather-mqtt-service]     INFO weather/0/icon           ---> 04n
+2025-10-26 17:19:00,514 [openweather-mqtt-service]     INFO weather/0/id             ---> 804
+2025-10-26 17:19:00,514 [openweather-mqtt-service]     INFO weather/0/main           ---> Clouds
+2025-10-26 17:19:00,514 [openweather-mqtt-service]     INFO wind/deg                 ---> 253
+2025-10-26 17:19:00,514 [openweather-mqtt-service]     INFO wind/gust                ---> 19.36
+2025-10-26 17:19:00,514 [openweather-mqtt-service]     INFO wind/speed               ---> 11.71
+2025-10-26 17:19:00,514 [openweather-mqtt-service]     INFO base                     ---> stations
+2025-10-26 17:19:00,514 [openweather-mqtt-service]     INFO clouds/all               ---> 100
+2025-10-26 17:19:00,514 [openweather-mqtt-service]     INFO cod                      ---> 200
+2025-10-26 17:19:00,514 [openweather-mqtt-service]     INFO coord/lat                ---> 51.2333
+2025-10-26 17:19:00,515 [openweather-mqtt-service]     INFO coord/lon                ---> 12.7167
+2025-10-26 17:19:00,515 [openweather-mqtt-service]     INFO dt                       ---> 1761498707
+2025-10-26 17:19:00,515 [openweather-mqtt-service]     INFO id                       ---> 2917325
+2025-10-26 17:19:00,515 [openweather-mqtt-service]     INFO main/feels_like          ---> 3.32
+2025-10-26 17:19:00,515 [openweather-mqtt-service]     INFO main/grnd_level          ---> 982
+2025-10-26 17:19:00,515 [openweather-mqtt-service]     INFO main/humidity            ---> 77
+2025-10-26 17:19:00,515 [openweather-mqtt-service]     INFO main/pressure            ---> 1001
+2025-10-26 17:19:00,515 [openweather-mqtt-service]     INFO main/sea_level           ---> 1001
+2025-10-26 17:19:00,515 [openweather-mqtt-service]     INFO main/temp                ---> 8.1
+2025-10-26 17:19:00,515 [openweather-mqtt-service]     INFO main/temp_max            ---> 8.22
+2025-10-26 17:19:00,515 [openweather-mqtt-service]     INFO main/temp_min            ---> 7.86
+2025-10-26 17:19:00,515 [openweather-mqtt-service]     INFO name                     ---> Grimma
+2025-10-26 17:19:00,515 [openweather-mqtt-service]     INFO rain/1h                  ---> 0
+2025-10-26 17:19:00,515 [openweather-mqtt-service]     INFO rain/3h                  ---> 0
+2025-10-26 17:19:00,515 [openweather-mqtt-service]     INFO sys/country              ---> DE
+2025-10-26 17:19:00,516 [openweather-mqtt-service]     INFO sys/id                   ---> 2000347
+2025-10-26 17:19:00,516 [openweather-mqtt-service]     INFO sys/sunrise              ---> 1761457882
+2025-10-26 17:19:00,516 [openweather-mqtt-service]     INFO sys/sunset               ---> 1761494074
+2025-10-26 17:19:00,516 [openweather-mqtt-service]     INFO sys/type                 ---> 2
+2025-10-26 17:19:00,516 [openweather-mqtt-service]     INFO timezone                 ---> 3600
+2025-10-26 17:19:00,516 [openweather-mqtt-service]     INFO visibility               ---> 10000
+2025-10-26 17:19:00,516 [openweather-mqtt-service]     INFO weather/0/description    ---> Bedeckt
+2025-10-26 17:19:00,516 [openweather-mqtt-service]     INFO weather/0/icon           ---> 04n
+2025-10-26 17:19:00,516 [openweather-mqtt-service]     INFO weather/0/id             ---> 804
+2025-10-26 17:19:00,516 [openweather-mqtt-service]     INFO weather/0/main           ---> Clouds
+2025-10-26 17:19:00,516 [openweather-mqtt-service]     INFO wind/deg                 ---> 253
+2025-10-26 17:19:00,516 [openweather-mqtt-service]     INFO wind/gust                ---> 19.36
+2025-10-26 17:19:00,516 [openweather-mqtt-service]     INFO wind/speed               ---> 11.71
+2025-10-26 17:19:00,516 [openweather-mqtt-service]     INFO Publishing to 192.168.2.120:1883
+2025-10-26 17:19:00,516 [openweather-mqtt-service]     INFO Publishing to zetten14.ddns.net:1883
+2025-10-26 17:19:00,517 [paho.mqtt.client]    DEBUG Sending CONNECT (u1, p1, wr0, wq0, wf0, c1, k60) client_id=b'openweather-mqtt-service'
+2025-10-26 17:19:00,518 [paho.mqtt.client]    DEBUG Received CONNACK (0, 0)
+2025-10-26 17:19:00,519 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m1), 'b'openweather/base'', ... (8 bytes)
+2025-10-26 17:19:00,519 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m2), 'b'openweather/clouds/all'', ... (3 bytes)
+2025-10-26 17:19:00,520 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m3), 'b'openweather/cod'', ... (3 bytes)
+2025-10-26 17:19:00,520 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m4), 'b'openweather/coord/lat'', ... (7 bytes)
+2025-10-26 17:19:00,520 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m5), 'b'openweather/coord/lon'', ... (7 bytes)
+2025-10-26 17:19:00,520 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m6), 'b'openweather/dt'', ... (10 bytes)
+2025-10-26 17:19:00,520 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m7), 'b'openweather/id'', ... (7 bytes)
+2025-10-26 17:19:00,521 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m8), 'b'openweather/main/feels_like'', ... (4 bytes)
+2025-10-26 17:19:00,521 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m9), 'b'openweather/main/grnd_level'', ... (3 bytes)
+2025-10-26 17:19:00,521 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m10), 'b'openweather/main/humidity'', ... (2 bytes)
+2025-10-26 17:19:00,521 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m11), 'b'openweather/main/pressure'', ... (4 bytes)
+2025-10-26 17:19:00,521 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m12), 'b'openweather/main/sea_level'', ... (4 bytes)
+2025-10-26 17:19:00,522 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m13), 'b'openweather/main/temp'', ... (3 bytes)
+2025-10-26 17:19:00,522 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m14), 'b'openweather/main/temp_max'', ... (4 bytes)
+2025-10-26 17:19:00,522 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m15), 'b'openweather/main/temp_min'', ... (4 bytes)
+2025-10-26 17:19:00,522 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m16), 'b'openweather/name'', ... (6 bytes)
+2025-10-26 17:19:00,522 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m17), 'b'openweather/rain/1h'', ... (1 bytes)
+2025-10-26 17:19:00,522 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m18), 'b'openweather/rain/3h'', ... (1 bytes)
+2025-10-26 17:19:00,522 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m19), 'b'openweather/sys/country'', ... (2 bytes)
+2025-10-26 17:19:00,523 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m20), 'b'openweather/sys/id'', ... (7 bytes)
+2025-10-26 17:19:00,523 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m21), 'b'openweather/sys/sunrise'', ... (10 bytes)
+2025-10-26 17:19:00,523 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m22), 'b'openweather/sys/sunset'', ... (10 bytes)
+2025-10-26 17:19:00,523 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m23), 'b'openweather/sys/type'', ... (1 bytes)
+2025-10-26 17:19:00,523 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m24), 'b'openweather/timezone'', ... (4 bytes)
+2025-10-26 17:19:00,523 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m25), 'b'openweather/visibility'', ... (5 bytes)
+2025-10-26 17:19:00,524 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m26), 'b'openweather/weather/0/description'', ... (7 bytes)
+2025-10-26 17:19:00,524 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m27), 'b'openweather/weather/0/icon'', ... (3 bytes)
+2025-10-26 17:19:00,524 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m28), 'b'openweather/weather/0/id'', ... (3 bytes)
+2025-10-26 17:19:00,524 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m29), 'b'openweather/weather/0/main'', ... (6 bytes)
+2025-10-26 17:19:00,524 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m30), 'b'openweather/wind/deg'', ... (3 bytes)
+2025-10-26 17:19:00,524 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m31), 'b'openweather/wind/gust'', ... (5 bytes)
+2025-10-26 17:19:00,524 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m32), 'b'openweather/wind/speed'', ... (5 bytes)
+2025-10-26 17:19:00,525 [paho.mqtt.client]    DEBUG Sending DISCONNECT
+2025-10-26 17:19:00,611 [paho.mqtt.client]    DEBUG Sending CONNECT (u1, p1, wr0, wq0, wf0, c1, k60) client_id=b'openweather-mqtt-service'
+2025-10-26 17:19:00,670 [paho.mqtt.client]    DEBUG Received CONNACK (0, 0)
+2025-10-26 17:19:00,671 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m1), 'b'Z14_Weather/base'', ... (8 bytes)
+2025-10-26 17:19:00,671 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m2), 'b'Z14_Weather/clouds/all'', ... (3 bytes)
+2025-10-26 17:19:00,672 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m3), 'b'Z14_Weather/cod'', ... (3 bytes)
+2025-10-26 17:19:00,672 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m4), 'b'Z14_Weather/coord/lat'', ... (7 bytes)
+2025-10-26 17:19:00,672 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m5), 'b'Z14_Weather/coord/lon'', ... (7 bytes)
+2025-10-26 17:19:00,673 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m6), 'b'Z14_Weather/dt'', ... (10 bytes)
+2025-10-26 17:19:00,673 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m7), 'b'Z14_Weather/id'', ... (7 bytes)
+2025-10-26 17:19:00,673 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m8), 'b'Z14_Weather/main/feels_like'', ... (4 bytes)
+2025-10-26 17:19:00,673 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m9), 'b'Z14_Weather/main/grnd_level'', ... (3 bytes)
+2025-10-26 17:19:00,674 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m10), 'b'Z14_Weather/main/humidity'', ... (2 bytes)
+2025-10-26 17:19:00,674 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m11), 'b'Z14_Weather/main/pressure'', ... (4 bytes)
+2025-10-26 17:19:00,674 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m12), 'b'Z14_Weather/main/sea_level'', ... (4 bytes)
+2025-10-26 17:19:00,674 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m13), 'b'Z14_Weather/main/temp'', ... (3 bytes)
+2025-10-26 17:19:00,675 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m14), 'b'Z14_Weather/main/temp_max'', ... (4 bytes)
+2025-10-26 17:19:00,675 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m15), 'b'Z14_Weather/main/temp_min'', ... (4 bytes)
+2025-10-26 17:19:00,675 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m16), 'b'Z14_Weather/name'', ... (6 bytes)
+2025-10-26 17:19:00,675 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m17), 'b'Z14_Weather/rain/1h'', ... (1 bytes)
+2025-10-26 17:19:00,675 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m18), 'b'Z14_Weather/rain/3h'', ... (1 bytes)
+2025-10-26 17:19:00,675 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m19), 'b'Z14_Weather/sys/country'', ... (2 bytes)
+2025-10-26 17:19:00,675 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m20), 'b'Z14_Weather/sys/id'', ... (7 bytes)
+2025-10-26 17:19:00,675 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m21), 'b'Z14_Weather/sys/sunrise'', ... (10 bytes)
+2025-10-26 17:19:00,675 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m22), 'b'Z14_Weather/sys/sunset'', ... (10 bytes)
+2025-10-26 17:19:00,675 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m23), 'b'Z14_Weather/sys/type'', ... (1 bytes)
+2025-10-26 17:19:00,676 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m24), 'b'Z14_Weather/timezone'', ... (4 bytes)
+2025-10-26 17:19:00,676 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m25), 'b'Z14_Weather/visibility'', ... (5 bytes)
+2025-10-26 17:19:00,676 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m26), 'b'Z14_Weather/weather/0/description'', ... (7 bytes)
+2025-10-26 17:19:00,676 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m27), 'b'Z14_Weather/weather/0/icon'', ... (3 bytes)
+2025-10-26 17:19:00,676 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m28), 'b'Z14_Weather/weather/0/id'', ... (3 bytes)
+2025-10-26 17:19:00,676 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m29), 'b'Z14_Weather/weather/0/main'', ... (6 bytes)
+2025-10-26 17:19:00,676 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m30), 'b'Z14_Weather/wind/deg'', ... (3 bytes)
+2025-10-26 17:19:00,676 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m31), 'b'Z14_Weather/wind/gust'', ... (5 bytes)
+2025-10-26 17:19:00,676 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m32), 'b'Z14_Weather/wind/speed'', ... (5 bytes)
+2025-10-26 17:19:00,676 [paho.mqtt.client]    DEBUG Sending DISCONNECT
+2025-10-26 17:19:56,176 [openweather-mqtt-service]    DEBUG ################################################################################
+2025-10-26 17:19:56,176 [openweather-mqtt-service]    DEBUG # OPENWEATHER_APP_ID=197674d6fc53cbb5e3dfbfcc68d4bbd2
+2025-10-26 17:19:56,176 [openweather-mqtt-service]    DEBUG # OPENWEATHER_CITY_ID_1=2917325
+2025-10-26 17:19:56,177 [openweather-mqtt-service]    DEBUG # MQTT_SERVICE_HOST_1=192.168.2.120
+2025-10-26 17:19:56,177 [openweather-mqtt-service]    DEBUG # MQTT_SERVICE_PORT_1=1883
+2025-10-26 17:19:56,177 [openweather-mqtt-service]    DEBUG # MQTT_SERVICE_TOPIC_1=openweather
+2025-10-26 17:19:56,177 [openweather-mqtt-service]    DEBUG # MQTT_CLIENT_ID_1=openweather-mqtt-service
+2025-10-26 17:19:56,177 [openweather-mqtt-service]    DEBUG # MQTT_SERVICE_USER_1=alpha
+2025-10-26 17:19:56,177 [openweather-mqtt-service]    DEBUG # MQTT_SERVICE_PW_1=08alpha64//
+2025-10-26 17:19:56,177 [openweather-mqtt-service]    DEBUG # -------------------------------------------
+2025-10-26 17:19:56,177 [openweather-mqtt-service]    DEBUG # OPENWEATHER_CITY_ID_2=3305800
+2025-10-26 17:19:56,177 [openweather-mqtt-service]    DEBUG # MQTT_SERVICE_HOST_2=zetten14.ddns.net
+2025-10-26 17:19:56,177 [openweather-mqtt-service]    DEBUG # MQTT_SERVICE_PORT_2=1883
+2025-10-26 17:19:56,177 [openweather-mqtt-service]    DEBUG # MQTT_SERVICE_TOPIC_2=Z14_Weather
+2025-10-26 17:19:56,177 [openweather-mqtt-service]    DEBUG # MQTT_CLIENT_ID_2=openweather-mqtt-service
+2025-10-26 17:19:56,177 [openweather-mqtt-service]    DEBUG # MQTT_SERVICE_USER_2=zetten14
+2025-10-26 17:19:56,177 [openweather-mqtt-service]    DEBUG # MQTT_SERVICE_PW_2=zetten14//
+2025-10-26 17:19:56,177 [openweather-mqtt-service]    DEBUG ################################################################################
+2025-10-26 17:19:56,177 [openweather-mqtt-service]     INFO Connecting to OpenWeather for fresh weather information.
+2025-10-26 17:19:56,179 [urllib3.connectionpool]    DEBUG Starting new HTTP connection (1): api.openweathermap.org:80
+2025-10-26 17:19:56,243 [urllib3.connectionpool]    DEBUG http://api.openweathermap.org:80 "GET /data/2.5/weather?id=2917325&appid=197674d6fc53cbb5e3dfbfcc68d4bbd2&type=accurate&units=metric&lang=de HTTP/1.1" 200 510
+2025-10-26 17:19:56,245 [openweather-mqtt-service]     INFO base                     ---> stations
+2025-10-26 17:19:56,245 [openweather-mqtt-service]     INFO clouds/all               ---> 100
+2025-10-26 17:19:56,246 [openweather-mqtt-service]     INFO cod                      ---> 200
+2025-10-26 17:19:56,246 [openweather-mqtt-service]     INFO coord/lat                ---> 51.2333
+2025-10-26 17:19:56,246 [openweather-mqtt-service]     INFO coord/lon                ---> 12.7167
+2025-10-26 17:19:56,246 [openweather-mqtt-service]     INFO dt                       ---> 1761498707
+2025-10-26 17:19:56,246 [openweather-mqtt-service]     INFO id                       ---> 2917325
+2025-10-26 17:19:56,246 [openweather-mqtt-service]     INFO main/feels_like          ---> 3.32
+2025-10-26 17:19:56,246 [openweather-mqtt-service]     INFO main/grnd_level          ---> 982
+2025-10-26 17:19:56,246 [openweather-mqtt-service]     INFO main/humidity            ---> 77
+2025-10-26 17:19:56,246 [openweather-mqtt-service]     INFO main/pressure            ---> 1001
+2025-10-26 17:19:56,246 [openweather-mqtt-service]     INFO main/sea_level           ---> 1001
+2025-10-26 17:19:56,247 [openweather-mqtt-service]     INFO main/temp                ---> 8.1
+2025-10-26 17:19:56,247 [openweather-mqtt-service]     INFO main/temp_max            ---> 8.22
+2025-10-26 17:19:56,247 [openweather-mqtt-service]     INFO main/temp_min            ---> 7.86
+2025-10-26 17:19:56,247 [openweather-mqtt-service]     INFO name                     ---> Grimma
+2025-10-26 17:19:56,247 [openweather-mqtt-service]     INFO rain/1h                  ---> 0
+2025-10-26 17:19:56,247 [openweather-mqtt-service]     INFO rain/3h                  ---> 0
+2025-10-26 17:19:56,247 [openweather-mqtt-service]     INFO sys/country              ---> DE
+2025-10-26 17:19:56,247 [openweather-mqtt-service]     INFO sys/id                   ---> 2000347
+2025-10-26 17:19:56,247 [openweather-mqtt-service]     INFO sys/sunrise              ---> 1761457882
+2025-10-26 17:19:56,247 [openweather-mqtt-service]     INFO sys/sunset               ---> 1761494074
+2025-10-26 17:19:56,248 [openweather-mqtt-service]     INFO sys/type                 ---> 2
+2025-10-26 17:19:56,248 [openweather-mqtt-service]     INFO timezone                 ---> 3600
+2025-10-26 17:19:56,248 [openweather-mqtt-service]     INFO visibility               ---> 10000
+2025-10-26 17:19:56,248 [openweather-mqtt-service]     INFO weather/0/description    ---> Bedeckt
+2025-10-26 17:19:56,248 [openweather-mqtt-service]     INFO weather/0/icon           ---> 04n
+2025-10-26 17:19:56,248 [openweather-mqtt-service]     INFO weather/0/id             ---> 804
+2025-10-26 17:19:56,248 [openweather-mqtt-service]     INFO weather/0/main           ---> Clouds
+2025-10-26 17:19:56,248 [openweather-mqtt-service]     INFO wind/deg                 ---> 253
+2025-10-26 17:19:56,248 [openweather-mqtt-service]     INFO wind/gust                ---> 19.36
+2025-10-26 17:19:56,248 [openweather-mqtt-service]     INFO wind/speed               ---> 11.71
+2025-10-26 17:19:56,248 [openweather-mqtt-service]     INFO base                     ---> stations
+2025-10-26 17:19:56,249 [openweather-mqtt-service]     INFO clouds/all               ---> 100
+2025-10-26 17:19:56,249 [openweather-mqtt-service]     INFO cod                      ---> 200
+2025-10-26 17:19:56,249 [openweather-mqtt-service]     INFO coord/lat                ---> 51.2333
+2025-10-26 17:19:56,249 [openweather-mqtt-service]     INFO coord/lon                ---> 12.7167
+2025-10-26 17:19:56,249 [openweather-mqtt-service]     INFO dt                       ---> 1761498707
+2025-10-26 17:19:56,249 [openweather-mqtt-service]     INFO id                       ---> 2917325
+2025-10-26 17:19:56,249 [openweather-mqtt-service]     INFO main/feels_like          ---> 3.32
+2025-10-26 17:19:56,249 [openweather-mqtt-service]     INFO main/grnd_level          ---> 982
+2025-10-26 17:19:56,249 [openweather-mqtt-service]     INFO main/humidity            ---> 77
+2025-10-26 17:19:56,249 [openweather-mqtt-service]     INFO main/pressure            ---> 1001
+2025-10-26 17:19:56,249 [openweather-mqtt-service]     INFO main/sea_level           ---> 1001
+2025-10-26 17:19:56,249 [openweather-mqtt-service]     INFO main/temp                ---> 8.1
+2025-10-26 17:19:56,249 [openweather-mqtt-service]     INFO main/temp_max            ---> 8.22
+2025-10-26 17:19:56,249 [openweather-mqtt-service]     INFO main/temp_min            ---> 7.86
+2025-10-26 17:19:56,249 [openweather-mqtt-service]     INFO name                     ---> Grimma
+2025-10-26 17:19:56,250 [openweather-mqtt-service]     INFO rain/1h                  ---> 0
+2025-10-26 17:19:56,250 [openweather-mqtt-service]     INFO rain/3h                  ---> 0
+2025-10-26 17:19:56,250 [openweather-mqtt-service]     INFO sys/country              ---> DE
+2025-10-26 17:19:56,250 [openweather-mqtt-service]     INFO sys/id                   ---> 2000347
+2025-10-26 17:19:56,250 [openweather-mqtt-service]     INFO sys/sunrise              ---> 1761457882
+2025-10-26 17:19:56,250 [openweather-mqtt-service]     INFO sys/sunset               ---> 1761494074
+2025-10-26 17:19:56,250 [openweather-mqtt-service]     INFO sys/type                 ---> 2
+2025-10-26 17:19:56,250 [openweather-mqtt-service]     INFO timezone                 ---> 3600
+2025-10-26 17:19:56,250 [openweather-mqtt-service]     INFO visibility               ---> 10000
+2025-10-26 17:19:56,250 [openweather-mqtt-service]     INFO weather/0/description    ---> Bedeckt
+2025-10-26 17:19:56,250 [openweather-mqtt-service]     INFO weather/0/icon           ---> 04n
+2025-10-26 17:19:56,250 [openweather-mqtt-service]     INFO weather/0/id             ---> 804
+2025-10-26 17:19:56,250 [openweather-mqtt-service]     INFO weather/0/main           ---> Clouds
+2025-10-26 17:19:56,250 [openweather-mqtt-service]     INFO wind/deg                 ---> 253
+2025-10-26 17:19:56,250 [openweather-mqtt-service]     INFO wind/gust                ---> 19.36
+2025-10-26 17:19:56,250 [openweather-mqtt-service]     INFO wind/speed               ---> 11.71
+2025-10-26 17:19:56,250 [openweather-mqtt-service]     INFO Publishing to 192.168.2.120:1883
+2025-10-26 17:19:56,250 [openweather-mqtt-service]     INFO Publishing to zetten14.ddns.net:1883
+2025-10-26 17:19:56,252 [paho.mqtt.client]    DEBUG Sending CONNECT (u1, p1, wr0, wq0, wf0, c1, k60) client_id=b'openweather-mqtt-service'
+2025-10-26 17:19:56,253 [paho.mqtt.client]    DEBUG Received CONNACK (0, 0)
+2025-10-26 17:19:56,253 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m1), 'b'openweather/base'', ... (8 bytes)
+2025-10-26 17:19:56,254 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m2), 'b'openweather/clouds/all'', ... (3 bytes)
+2025-10-26 17:19:56,254 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m3), 'b'openweather/cod'', ... (3 bytes)
+2025-10-26 17:19:56,254 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m4), 'b'openweather/coord/lat'', ... (7 bytes)
+2025-10-26 17:19:56,254 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m5), 'b'openweather/coord/lon'', ... (7 bytes)
+2025-10-26 17:19:56,255 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m6), 'b'openweather/dt'', ... (10 bytes)
+2025-10-26 17:19:56,255 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m7), 'b'openweather/id'', ... (7 bytes)
+2025-10-26 17:19:56,255 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m8), 'b'openweather/main/feels_like'', ... (4 bytes)
+2025-10-26 17:19:56,255 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m9), 'b'openweather/main/grnd_level'', ... (3 bytes)
+2025-10-26 17:19:56,256 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m10), 'b'openweather/main/humidity'', ... (2 bytes)
+2025-10-26 17:19:56,256 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m11), 'b'openweather/main/pressure'', ... (4 bytes)
+2025-10-26 17:19:56,256 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m12), 'b'openweather/main/sea_level'', ... (4 bytes)
+2025-10-26 17:19:56,256 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m13), 'b'openweather/main/temp'', ... (3 bytes)
+2025-10-26 17:19:56,256 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m14), 'b'openweather/main/temp_max'', ... (4 bytes)
+2025-10-26 17:19:56,256 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m15), 'b'openweather/main/temp_min'', ... (4 bytes)
+2025-10-26 17:19:56,257 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m16), 'b'openweather/name'', ... (6 bytes)
+2025-10-26 17:19:56,257 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m17), 'b'openweather/rain/1h'', ... (1 bytes)
+2025-10-26 17:19:56,257 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m18), 'b'openweather/rain/3h'', ... (1 bytes)
+2025-10-26 17:19:56,257 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m19), 'b'openweather/sys/country'', ... (2 bytes)
+2025-10-26 17:19:56,257 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m20), 'b'openweather/sys/id'', ... (7 bytes)
+2025-10-26 17:19:56,257 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m21), 'b'openweather/sys/sunrise'', ... (10 bytes)
+2025-10-26 17:19:56,257 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m22), 'b'openweather/sys/sunset'', ... (10 bytes)
+2025-10-26 17:19:56,258 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m23), 'b'openweather/sys/type'', ... (1 bytes)
+2025-10-26 17:19:56,258 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m24), 'b'openweather/timezone'', ... (4 bytes)
+2025-10-26 17:19:56,258 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m25), 'b'openweather/visibility'', ... (5 bytes)
+2025-10-26 17:19:56,258 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m26), 'b'openweather/weather/0/description'', ... (7 bytes)
+2025-10-26 17:19:56,258 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m27), 'b'openweather/weather/0/icon'', ... (3 bytes)
+2025-10-26 17:19:56,258 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m28), 'b'openweather/weather/0/id'', ... (3 bytes)
+2025-10-26 17:19:56,259 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m29), 'b'openweather/weather/0/main'', ... (6 bytes)
+2025-10-26 17:19:56,259 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m30), 'b'openweather/wind/deg'', ... (3 bytes)
+2025-10-26 17:19:56,259 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m31), 'b'openweather/wind/gust'', ... (5 bytes)
+2025-10-26 17:19:56,259 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m32), 'b'openweather/wind/speed'', ... (5 bytes)
+2025-10-26 17:19:56,259 [paho.mqtt.client]    DEBUG Sending DISCONNECT
+2025-10-26 17:19:56,345 [paho.mqtt.client]    DEBUG Sending CONNECT (u1, p1, wr0, wq0, wf0, c1, k60) client_id=b'openweather-mqtt-service'
+2025-10-26 17:19:56,418 [paho.mqtt.client]    DEBUG Received CONNACK (0, 0)
+2025-10-26 17:19:56,419 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m1), 'b'Z14_Weather/base'', ... (8 bytes)
+2025-10-26 17:19:56,419 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m2), 'b'Z14_Weather/clouds/all'', ... (3 bytes)
+2025-10-26 17:19:56,420 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m3), 'b'Z14_Weather/cod'', ... (3 bytes)
+2025-10-26 17:19:56,420 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m4), 'b'Z14_Weather/coord/lat'', ... (7 bytes)
+2025-10-26 17:19:56,420 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m5), 'b'Z14_Weather/coord/lon'', ... (7 bytes)
+2025-10-26 17:19:56,420 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m6), 'b'Z14_Weather/dt'', ... (10 bytes)
+2025-10-26 17:19:56,421 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m7), 'b'Z14_Weather/id'', ... (7 bytes)
+2025-10-26 17:19:56,421 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m8), 'b'Z14_Weather/main/feels_like'', ... (4 bytes)
+2025-10-26 17:19:56,421 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m9), 'b'Z14_Weather/main/grnd_level'', ... (3 bytes)
+2025-10-26 17:19:56,421 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m10), 'b'Z14_Weather/main/humidity'', ... (2 bytes)
+2025-10-26 17:19:56,421 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m11), 'b'Z14_Weather/main/pressure'', ... (4 bytes)
+2025-10-26 17:19:56,422 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m12), 'b'Z14_Weather/main/sea_level'', ... (4 bytes)
+2025-10-26 17:19:56,422 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m13), 'b'Z14_Weather/main/temp'', ... (3 bytes)
+2025-10-26 17:19:56,422 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m14), 'b'Z14_Weather/main/temp_max'', ... (4 bytes)
+2025-10-26 17:19:56,422 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m15), 'b'Z14_Weather/main/temp_min'', ... (4 bytes)
+2025-10-26 17:19:56,422 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m16), 'b'Z14_Weather/name'', ... (6 bytes)
+2025-10-26 17:19:56,423 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m17), 'b'Z14_Weather/rain/1h'', ... (1 bytes)
+2025-10-26 17:19:56,423 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m18), 'b'Z14_Weather/rain/3h'', ... (1 bytes)
+2025-10-26 17:19:56,423 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m19), 'b'Z14_Weather/sys/country'', ... (2 bytes)
+2025-10-26 17:19:56,423 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m20), 'b'Z14_Weather/sys/id'', ... (7 bytes)
+2025-10-26 17:19:56,423 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m21), 'b'Z14_Weather/sys/sunrise'', ... (10 bytes)
+2025-10-26 17:19:56,423 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m22), 'b'Z14_Weather/sys/sunset'', ... (10 bytes)
+2025-10-26 17:19:56,423 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m23), 'b'Z14_Weather/sys/type'', ... (1 bytes)
+2025-10-26 17:19:56,423 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m24), 'b'Z14_Weather/timezone'', ... (4 bytes)
+2025-10-26 17:19:56,423 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m25), 'b'Z14_Weather/visibility'', ... (5 bytes)
+2025-10-26 17:19:56,423 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m26), 'b'Z14_Weather/weather/0/description'', ... (7 bytes)
+2025-10-26 17:19:56,424 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m27), 'b'Z14_Weather/weather/0/icon'', ... (3 bytes)
+2025-10-26 17:19:56,424 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m28), 'b'Z14_Weather/weather/0/id'', ... (3 bytes)
+2025-10-26 17:19:56,424 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m29), 'b'Z14_Weather/weather/0/main'', ... (6 bytes)
+2025-10-26 17:19:56,424 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m30), 'b'Z14_Weather/wind/deg'', ... (3 bytes)
+2025-10-26 17:19:56,424 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m31), 'b'Z14_Weather/wind/gust'', ... (5 bytes)
+2025-10-26 17:19:56,424 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m32), 'b'Z14_Weather/wind/speed'', ... (5 bytes)
+2025-10-26 17:19:56,424 [paho.mqtt.client]    DEBUG Sending DISCONNECT
+2025-10-26 17:24:56,424 [openweather-mqtt-service]     INFO Connecting to OpenWeather for fresh weather information.
+2025-10-26 17:24:56,425 [urllib3.connectionpool]    DEBUG Starting new HTTP connection (1): api.openweathermap.org:80
+2025-10-26 17:24:56,508 [urllib3.connectionpool]    DEBUG http://api.openweathermap.org:80 "GET /data/2.5/weather?id=2917325&appid=197674d6fc53cbb5e3dfbfcc68d4bbd2&type=accurate&units=metric&lang=de HTTP/1.1" 200 510
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO base                     ---> stations
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO clouds/all               ---> 100
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO cod                      ---> 200
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO coord/lat                ---> 51.2333
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO coord/lon                ---> 12.7167
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO dt                       ---> 1761499496
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO id                       ---> 2917325
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO main/feels_like          ---> 3.32
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO main/grnd_level          ---> 982
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO main/humidity            ---> 77
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO main/pressure            ---> 1002
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO main/sea_level           ---> 1002
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO main/temp                ---> 8.1
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO main/temp_max            ---> 8.22
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO main/temp_min            ---> 7.86
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO name                     ---> Grimma
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO rain/1h                  ---> 0
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO rain/3h                  ---> 0
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO sys/country              ---> DE
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO sys/id                   ---> 2000347
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO sys/sunrise              ---> 1761457882
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO sys/sunset               ---> 1761494074
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO sys/type                 ---> 2
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO timezone                 ---> 3600
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO visibility               ---> 10000
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO weather/0/description    ---> Bedeckt
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO weather/0/icon           ---> 04n
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO weather/0/id             ---> 804
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO weather/0/main           ---> Clouds
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO wind/deg                 ---> 253
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO wind/gust                ---> 19.36
+2025-10-26 17:24:56,509 [openweather-mqtt-service]     INFO wind/speed               ---> 11.71
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO base                     ---> stations
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO clouds/all               ---> 100
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO cod                      ---> 200
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO coord/lat                ---> 51.2333
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO coord/lon                ---> 12.7167
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO dt                       ---> 1761499496
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO id                       ---> 2917325
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO main/feels_like          ---> 3.32
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO main/grnd_level          ---> 982
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO main/humidity            ---> 77
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO main/pressure            ---> 1002
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO main/sea_level           ---> 1002
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO main/temp                ---> 8.1
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO main/temp_max            ---> 8.22
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO main/temp_min            ---> 7.86
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO name                     ---> Grimma
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO rain/1h                  ---> 0
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO rain/3h                  ---> 0
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO sys/country              ---> DE
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO sys/id                   ---> 2000347
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO sys/sunrise              ---> 1761457882
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO sys/sunset               ---> 1761494074
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO sys/type                 ---> 2
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO timezone                 ---> 3600
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO visibility               ---> 10000
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO weather/0/description    ---> Bedeckt
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO weather/0/icon           ---> 04n
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO weather/0/id             ---> 804
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO weather/0/main           ---> Clouds
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO wind/deg                 ---> 253
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO wind/gust                ---> 19.36
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO wind/speed               ---> 11.71
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO Publishing to 192.168.2.120:1883
+2025-10-26 17:24:56,510 [openweather-mqtt-service]     INFO Publishing to zetten14.ddns.net:1883
+2025-10-26 17:24:56,511 [paho.mqtt.client]    DEBUG Sending CONNECT (u1, p1, wr0, wq0, wf0, c1, k60) client_id=b'openweather-mqtt-service'
+2025-10-26 17:24:56,513 [paho.mqtt.client]    DEBUG Received CONNACK (0, 0)
+2025-10-26 17:24:56,513 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m1), 'b'openweather/base'', ... (8 bytes)
+2025-10-26 17:24:56,513 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m2), 'b'openweather/clouds/all'', ... (3 bytes)
+2025-10-26 17:24:56,513 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m3), 'b'openweather/cod'', ... (3 bytes)
+2025-10-26 17:24:56,513 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m4), 'b'openweather/coord/lat'', ... (7 bytes)
+2025-10-26 17:24:56,513 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m5), 'b'openweather/coord/lon'', ... (7 bytes)
+2025-10-26 17:24:56,513 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m6), 'b'openweather/dt'', ... (10 bytes)
+2025-10-26 17:24:56,513 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m7), 'b'openweather/id'', ... (7 bytes)
+2025-10-26 17:24:56,513 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m8), 'b'openweather/main/feels_like'', ... (4 bytes)
+2025-10-26 17:24:56,514 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m9), 'b'openweather/main/grnd_level'', ... (3 bytes)
+2025-10-26 17:24:56,514 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m10), 'b'openweather/main/humidity'', ... (2 bytes)
+2025-10-26 17:24:56,514 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m11), 'b'openweather/main/pressure'', ... (4 bytes)
+2025-10-26 17:24:56,514 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m12), 'b'openweather/main/sea_level'', ... (4 bytes)
+2025-10-26 17:24:56,514 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m13), 'b'openweather/main/temp'', ... (3 bytes)
+2025-10-26 17:24:56,514 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m14), 'b'openweather/main/temp_max'', ... (4 bytes)
+2025-10-26 17:24:56,514 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m15), 'b'openweather/main/temp_min'', ... (4 bytes)
+2025-10-26 17:24:56,514 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m16), 'b'openweather/name'', ... (6 bytes)
+2025-10-26 17:24:56,514 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m17), 'b'openweather/rain/1h'', ... (1 bytes)
+2025-10-26 17:24:56,514 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m18), 'b'openweather/rain/3h'', ... (1 bytes)
+2025-10-26 17:24:56,515 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m19), 'b'openweather/sys/country'', ... (2 bytes)
+2025-10-26 17:24:56,515 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m20), 'b'openweather/sys/id'', ... (7 bytes)
+2025-10-26 17:24:56,515 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m21), 'b'openweather/sys/sunrise'', ... (10 bytes)
+2025-10-26 17:24:56,515 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m22), 'b'openweather/sys/sunset'', ... (10 bytes)
+2025-10-26 17:24:56,515 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m23), 'b'openweather/sys/type'', ... (1 bytes)
+2025-10-26 17:24:56,515 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m24), 'b'openweather/timezone'', ... (4 bytes)
+2025-10-26 17:24:56,515 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m25), 'b'openweather/visibility'', ... (5 bytes)
+2025-10-26 17:24:56,515 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m26), 'b'openweather/weather/0/description'', ... (7 bytes)
+2025-10-26 17:24:56,515 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m27), 'b'openweather/weather/0/icon'', ... (3 bytes)
+2025-10-26 17:24:56,515 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m28), 'b'openweather/weather/0/id'', ... (3 bytes)
+2025-10-26 17:24:56,516 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m29), 'b'openweather/weather/0/main'', ... (6 bytes)
+2025-10-26 17:24:56,516 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m30), 'b'openweather/wind/deg'', ... (3 bytes)
+2025-10-26 17:24:56,516 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m31), 'b'openweather/wind/gust'', ... (5 bytes)
+2025-10-26 17:24:56,516 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m32), 'b'openweather/wind/speed'', ... (5 bytes)
+2025-10-26 17:24:56,516 [paho.mqtt.client]    DEBUG Sending DISCONNECT
+2025-10-26 17:24:56,671 [paho.mqtt.client]    DEBUG Sending CONNECT (u1, p1, wr0, wq0, wf0, c1, k60) client_id=b'openweather-mqtt-service'
+2025-10-26 17:24:57,170 [paho.mqtt.client]    DEBUG Received CONNACK (0, 0)
+2025-10-26 17:24:57,170 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m1), 'b'Z14_Weather/base'', ... (8 bytes)
+2025-10-26 17:24:57,171 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m2), 'b'Z14_Weather/clouds/all'', ... (3 bytes)
+2025-10-26 17:24:57,171 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m3), 'b'Z14_Weather/cod'', ... (3 bytes)
+2025-10-26 17:24:57,171 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m4), 'b'Z14_Weather/coord/lat'', ... (7 bytes)
+2025-10-26 17:24:57,171 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m5), 'b'Z14_Weather/coord/lon'', ... (7 bytes)
+2025-10-26 17:24:57,171 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m6), 'b'Z14_Weather/dt'', ... (10 bytes)
+2025-10-26 17:24:57,171 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m7), 'b'Z14_Weather/id'', ... (7 bytes)
+2025-10-26 17:24:57,171 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m8), 'b'Z14_Weather/main/feels_like'', ... (4 bytes)
+2025-10-26 17:24:57,171 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m9), 'b'Z14_Weather/main/grnd_level'', ... (3 bytes)
+2025-10-26 17:24:57,171 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m10), 'b'Z14_Weather/main/humidity'', ... (2 bytes)
+2025-10-26 17:24:57,171 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m11), 'b'Z14_Weather/main/pressure'', ... (4 bytes)
+2025-10-26 17:24:57,171 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m12), 'b'Z14_Weather/main/sea_level'', ... (4 bytes)
+2025-10-26 17:24:57,171 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m13), 'b'Z14_Weather/main/temp'', ... (3 bytes)
+2025-10-26 17:24:57,172 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m14), 'b'Z14_Weather/main/temp_max'', ... (4 bytes)
+2025-10-26 17:24:57,172 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m15), 'b'Z14_Weather/main/temp_min'', ... (4 bytes)
+2025-10-26 17:24:57,172 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m16), 'b'Z14_Weather/name'', ... (6 bytes)
+2025-10-26 17:24:57,172 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m17), 'b'Z14_Weather/rain/1h'', ... (1 bytes)
+2025-10-26 17:24:57,172 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m18), 'b'Z14_Weather/rain/3h'', ... (1 bytes)
+2025-10-26 17:24:57,172 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m19), 'b'Z14_Weather/sys/country'', ... (2 bytes)
+2025-10-26 17:24:57,172 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m20), 'b'Z14_Weather/sys/id'', ... (7 bytes)
+2025-10-26 17:24:57,172 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m21), 'b'Z14_Weather/sys/sunrise'', ... (10 bytes)
+2025-10-26 17:24:57,172 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m22), 'b'Z14_Weather/sys/sunset'', ... (10 bytes)
+2025-10-26 17:24:57,172 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m23), 'b'Z14_Weather/sys/type'', ... (1 bytes)
+2025-10-26 17:24:57,172 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m24), 'b'Z14_Weather/timezone'', ... (4 bytes)
+2025-10-26 17:24:57,172 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m25), 'b'Z14_Weather/visibility'', ... (5 bytes)
+2025-10-26 17:24:57,172 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m26), 'b'Z14_Weather/weather/0/description'', ... (7 bytes)
+2025-10-26 17:24:57,173 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m27), 'b'Z14_Weather/weather/0/icon'', ... (3 bytes)
+2025-10-26 17:24:57,173 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m28), 'b'Z14_Weather/weather/0/id'', ... (3 bytes)
+2025-10-26 17:24:57,173 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m29), 'b'Z14_Weather/weather/0/main'', ... (6 bytes)
+2025-10-26 17:24:57,173 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m30), 'b'Z14_Weather/wind/deg'', ... (3 bytes)
+2025-10-26 17:24:57,173 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m31), 'b'Z14_Weather/wind/gust'', ... (5 bytes)
+2025-10-26 17:24:57,173 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m32), 'b'Z14_Weather/wind/speed'', ... (5 bytes)
+2025-10-26 17:24:57,173 [paho.mqtt.client]    DEBUG Sending DISCONNECT
+2025-10-26 17:29:57,173 [openweather-mqtt-service]     INFO Connecting to OpenWeather for fresh weather information.
+2025-10-26 17:29:57,175 [urllib3.connectionpool]    DEBUG Starting new HTTP connection (1): api.openweathermap.org:80
+2025-10-26 17:29:57,255 [urllib3.connectionpool]    DEBUG http://api.openweathermap.org:80 "GET /data/2.5/weather?id=2917325&appid=197674d6fc53cbb5e3dfbfcc68d4bbd2&type=accurate&units=metric&lang=de HTTP/1.1" 200 510
+2025-10-26 17:29:57,256 [openweather-mqtt-service]     INFO base                     ---> stations
+2025-10-26 17:29:57,256 [openweather-mqtt-service]     INFO clouds/all               ---> 100
+2025-10-26 17:29:57,256 [openweather-mqtt-service]     INFO cod                      ---> 200
+2025-10-26 17:29:57,257 [openweather-mqtt-service]     INFO coord/lat                ---> 51.2333
+2025-10-26 17:29:57,257 [openweather-mqtt-service]     INFO coord/lon                ---> 12.7167
+2025-10-26 17:29:57,257 [openweather-mqtt-service]     INFO dt                       ---> 1761499797
+2025-10-26 17:29:57,257 [openweather-mqtt-service]     INFO id                       ---> 2917325
+2025-10-26 17:29:57,257 [openweather-mqtt-service]     INFO main/feels_like          ---> 3.32
+2025-10-26 17:29:57,257 [openweather-mqtt-service]     INFO main/grnd_level          ---> 982
+2025-10-26 17:29:57,257 [openweather-mqtt-service]     INFO main/humidity            ---> 77
+2025-10-26 17:29:57,257 [openweather-mqtt-service]     INFO main/pressure            ---> 1002
+2025-10-26 17:29:57,257 [openweather-mqtt-service]     INFO main/sea_level           ---> 1002
+2025-10-26 17:29:57,257 [openweather-mqtt-service]     INFO main/temp                ---> 8.1
+2025-10-26 17:29:57,257 [openweather-mqtt-service]     INFO main/temp_max            ---> 8.22
+2025-10-26 17:29:57,257 [openweather-mqtt-service]     INFO main/temp_min            ---> 7.86
+2025-10-26 17:29:57,257 [openweather-mqtt-service]     INFO name                     ---> Grimma
+2025-10-26 17:29:57,257 [openweather-mqtt-service]     INFO rain/1h                  ---> 0
+2025-10-26 17:29:57,257 [openweather-mqtt-service]     INFO rain/3h                  ---> 0
+2025-10-26 17:29:57,257 [openweather-mqtt-service]     INFO sys/country              ---> DE
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO sys/id                   ---> 2000347
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO sys/sunrise              ---> 1761457882
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO sys/sunset               ---> 1761494074
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO sys/type                 ---> 2
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO timezone                 ---> 3600
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO visibility               ---> 10000
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO weather/0/description    ---> Bedeckt
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO weather/0/icon           ---> 04n
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO weather/0/id             ---> 804
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO weather/0/main           ---> Clouds
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO wind/deg                 ---> 253
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO wind/gust                ---> 19.36
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO wind/speed               ---> 11.71
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO base                     ---> stations
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO clouds/all               ---> 100
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO cod                      ---> 200
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO coord/lat                ---> 51.2333
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO coord/lon                ---> 12.7167
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO dt                       ---> 1761499797
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO id                       ---> 2917325
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO main/feels_like          ---> 3.32
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO main/grnd_level          ---> 982
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO main/humidity            ---> 77
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO main/pressure            ---> 1002
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO main/sea_level           ---> 1002
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO main/temp                ---> 8.1
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO main/temp_max            ---> 8.22
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO main/temp_min            ---> 7.86
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO name                     ---> Grimma
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO rain/1h                  ---> 0
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO rain/3h                  ---> 0
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO sys/country              ---> DE
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO sys/id                   ---> 2000347
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO sys/sunrise              ---> 1761457882
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO sys/sunset               ---> 1761494074
+2025-10-26 17:29:57,258 [openweather-mqtt-service]     INFO sys/type                 ---> 2
+2025-10-26 17:29:57,259 [openweather-mqtt-service]     INFO timezone                 ---> 3600
+2025-10-26 17:29:57,259 [openweather-mqtt-service]     INFO visibility               ---> 10000
+2025-10-26 17:29:57,259 [openweather-mqtt-service]     INFO weather/0/description    ---> Bedeckt
+2025-10-26 17:29:57,259 [openweather-mqtt-service]     INFO weather/0/icon           ---> 04n
+2025-10-26 17:29:57,259 [openweather-mqtt-service]     INFO weather/0/id             ---> 804
+2025-10-26 17:29:57,259 [openweather-mqtt-service]     INFO weather/0/main           ---> Clouds
+2025-10-26 17:29:57,259 [openweather-mqtt-service]     INFO wind/deg                 ---> 253
+2025-10-26 17:29:57,259 [openweather-mqtt-service]     INFO wind/gust                ---> 19.36
+2025-10-26 17:29:57,259 [openweather-mqtt-service]     INFO wind/speed               ---> 11.71
+2025-10-26 17:29:57,259 [openweather-mqtt-service]     INFO Publishing to 192.168.2.120:1883
+2025-10-26 17:29:57,259 [openweather-mqtt-service]     INFO Publishing to zetten14.ddns.net:1883
+2025-10-26 17:29:57,260 [paho.mqtt.client]    DEBUG Sending CONNECT (u1, p1, wr0, wq0, wf0, c1, k60) client_id=b'openweather-mqtt-service'
+2025-10-26 17:29:58,067 [paho.mqtt.client]    DEBUG Received CONNACK (0, 0)
+2025-10-26 17:29:58,067 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m1), 'b'openweather/base'', ... (8 bytes)
+2025-10-26 17:29:58,067 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m2), 'b'openweather/clouds/all'', ... (3 bytes)
+2025-10-26 17:29:58,068 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m3), 'b'openweather/cod'', ... (3 bytes)
+2025-10-26 17:29:58,068 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m4), 'b'openweather/coord/lat'', ... (7 bytes)
+2025-10-26 17:29:58,069 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m5), 'b'openweather/coord/lon'', ... (7 bytes)
+2025-10-26 17:29:58,069 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m6), 'b'openweather/dt'', ... (10 bytes)
+2025-10-26 17:29:58,069 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m7), 'b'openweather/id'', ... (7 bytes)
+2025-10-26 17:29:58,069 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m8), 'b'openweather/main/feels_like'', ... (4 bytes)
+2025-10-26 17:29:58,069 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m9), 'b'openweather/main/grnd_level'', ... (3 bytes)
+2025-10-26 17:29:58,069 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m10), 'b'openweather/main/humidity'', ... (2 bytes)
+2025-10-26 17:29:58,070 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m11), 'b'openweather/main/pressure'', ... (4 bytes)
+2025-10-26 17:29:58,070 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m12), 'b'openweather/main/sea_level'', ... (4 bytes)
+2025-10-26 17:29:58,070 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m13), 'b'openweather/main/temp'', ... (3 bytes)
+2025-10-26 17:29:58,070 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m14), 'b'openweather/main/temp_max'', ... (4 bytes)
+2025-10-26 17:29:58,070 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m15), 'b'openweather/main/temp_min'', ... (4 bytes)
+2025-10-26 17:29:58,071 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m16), 'b'openweather/name'', ... (6 bytes)
+2025-10-26 17:29:58,071 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m17), 'b'openweather/rain/1h'', ... (1 bytes)
+2025-10-26 17:29:58,071 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m18), 'b'openweather/rain/3h'', ... (1 bytes)
+2025-10-26 17:29:58,071 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m19), 'b'openweather/sys/country'', ... (2 bytes)
+2025-10-26 17:29:58,071 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m20), 'b'openweather/sys/id'', ... (7 bytes)
+2025-10-26 17:29:58,071 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m21), 'b'openweather/sys/sunrise'', ... (10 bytes)
+2025-10-26 17:29:58,072 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m22), 'b'openweather/sys/sunset'', ... (10 bytes)
+2025-10-26 17:29:58,072 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m23), 'b'openweather/sys/type'', ... (1 bytes)
+2025-10-26 17:29:58,072 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m24), 'b'openweather/timezone'', ... (4 bytes)
+2025-10-26 17:29:58,072 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m25), 'b'openweather/visibility'', ... (5 bytes)
+2025-10-26 17:29:58,072 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m26), 'b'openweather/weather/0/description'', ... (7 bytes)
+2025-10-26 17:29:58,072 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m27), 'b'openweather/weather/0/icon'', ... (3 bytes)
+2025-10-26 17:29:58,072 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m28), 'b'openweather/weather/0/id'', ... (3 bytes)
+2025-10-26 17:29:58,072 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m29), 'b'openweather/weather/0/main'', ... (6 bytes)
+2025-10-26 17:29:58,072 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m30), 'b'openweather/wind/deg'', ... (3 bytes)
+2025-10-26 17:29:58,073 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m31), 'b'openweather/wind/gust'', ... (5 bytes)
+2025-10-26 17:29:58,073 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m32), 'b'openweather/wind/speed'', ... (5 bytes)
+2025-10-26 17:29:58,073 [paho.mqtt.client]    DEBUG Sending DISCONNECT
+2025-10-26 17:29:59,208 [paho.mqtt.client]    DEBUG Sending CONNECT (u1, p1, wr0, wq0, wf0, c1, k60) client_id=b'openweather-mqtt-service'
+2025-10-26 17:29:59,278 [paho.mqtt.client]    DEBUG Received CONNACK (0, 0)
+2025-10-26 17:29:59,278 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m1), 'b'Z14_Weather/base'', ... (8 bytes)
+2025-10-26 17:29:59,278 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m2), 'b'Z14_Weather/clouds/all'', ... (3 bytes)
+2025-10-26 17:29:59,279 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m3), 'b'Z14_Weather/cod'', ... (3 bytes)
+2025-10-26 17:29:59,279 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m4), 'b'Z14_Weather/coord/lat'', ... (7 bytes)
+2025-10-26 17:29:59,279 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m5), 'b'Z14_Weather/coord/lon'', ... (7 bytes)
+2025-10-26 17:29:59,279 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m6), 'b'Z14_Weather/dt'', ... (10 bytes)
+2025-10-26 17:29:59,279 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m7), 'b'Z14_Weather/id'', ... (7 bytes)
+2025-10-26 17:29:59,279 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m8), 'b'Z14_Weather/main/feels_like'', ... (4 bytes)
+2025-10-26 17:29:59,279 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m9), 'b'Z14_Weather/main/grnd_level'', ... (3 bytes)
+2025-10-26 17:29:59,279 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m10), 'b'Z14_Weather/main/humidity'', ... (2 bytes)
+2025-10-26 17:29:59,279 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m11), 'b'Z14_Weather/main/pressure'', ... (4 bytes)
+2025-10-26 17:29:59,279 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m12), 'b'Z14_Weather/main/sea_level'', ... (4 bytes)
+2025-10-26 17:29:59,279 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m13), 'b'Z14_Weather/main/temp'', ... (3 bytes)
+2025-10-26 17:29:59,279 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m14), 'b'Z14_Weather/main/temp_max'', ... (4 bytes)
+2025-10-26 17:29:59,280 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m15), 'b'Z14_Weather/main/temp_min'', ... (4 bytes)
+2025-10-26 17:29:59,280 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m16), 'b'Z14_Weather/name'', ... (6 bytes)
+2025-10-26 17:29:59,280 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m17), 'b'Z14_Weather/rain/1h'', ... (1 bytes)
+2025-10-26 17:29:59,280 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m18), 'b'Z14_Weather/rain/3h'', ... (1 bytes)
+2025-10-26 17:29:59,280 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m19), 'b'Z14_Weather/sys/country'', ... (2 bytes)
+2025-10-26 17:29:59,280 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m20), 'b'Z14_Weather/sys/id'', ... (7 bytes)
+2025-10-26 17:29:59,280 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m21), 'b'Z14_Weather/sys/sunrise'', ... (10 bytes)
+2025-10-26 17:29:59,280 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m22), 'b'Z14_Weather/sys/sunset'', ... (10 bytes)
+2025-10-26 17:29:59,280 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m23), 'b'Z14_Weather/sys/type'', ... (1 bytes)
+2025-10-26 17:29:59,280 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m24), 'b'Z14_Weather/timezone'', ... (4 bytes)
+2025-10-26 17:29:59,280 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m25), 'b'Z14_Weather/visibility'', ... (5 bytes)
+2025-10-26 17:29:59,280 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m26), 'b'Z14_Weather/weather/0/description'', ... (7 bytes)
+2025-10-26 17:29:59,280 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m27), 'b'Z14_Weather/weather/0/icon'', ... (3 bytes)
+2025-10-26 17:29:59,280 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m28), 'b'Z14_Weather/weather/0/id'', ... (3 bytes)
+2025-10-26 17:29:59,280 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m29), 'b'Z14_Weather/weather/0/main'', ... (6 bytes)
+2025-10-26 17:29:59,280 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m30), 'b'Z14_Weather/wind/deg'', ... (3 bytes)
+2025-10-26 17:29:59,281 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m31), 'b'Z14_Weather/wind/gust'', ... (5 bytes)
+2025-10-26 17:29:59,281 [paho.mqtt.client]    DEBUG Sending PUBLISH (d0, q0, r0, m32), 'b'Z14_Weather/wind/speed'', ... (5 bytes)
+2025-10-26 17:29:59,281 [paho.mqtt.client]    DEBUG Sending DISCONNECT
